@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Jam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="mainscore" class="score">Score: 0</div>
+        <div id="ui">
+            <div id="welcomescreen">
+                <div>
+                    <img src="assets/logo.png" alt="pixeljamlogo">
+                    <div id="start" class="button">Start Game</div>
+                    <p>Eddie Carrillo</p>
+                </div>
+            </div>
+    
+            <div id="gameoverscreen">
+                <h1>GAME OVER</h1>
+                <p class="score">You scored: 0</p>
+                <div id="restart" class="button">Restart Game</div>
+            </div>
+        </div>
+    <canvas id="game"></canvas>
+
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>
