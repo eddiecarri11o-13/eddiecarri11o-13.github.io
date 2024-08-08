@@ -9,6 +9,12 @@ body {
     font-family: "Pixelify Sans", sans-serif;
     height: 100vh;
     background-color: blueviolet;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 
@@ -30,6 +36,7 @@ body {
 
 canvas {
     filter: blur(4px);
+    
 }
 
 #ui { 
