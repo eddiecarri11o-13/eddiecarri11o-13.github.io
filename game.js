@@ -128,7 +128,6 @@ function update() {
 
             if (!hasScored) {
                 scored();
-                hasScored = true;
             }
         }
 
@@ -140,8 +139,8 @@ function update() {
     drawCloudSmall();
     drawHoop();
     drawPlayer(throwing ? 'shot' : 'idle');
-    drawBball();
     drawSun();
+    drawBball();
     drawPowerBar();
     requestAnimationFrame(update);
 
@@ -184,7 +183,7 @@ function resetGame() {
 }
 
 function scored() {
-    console.log('scored!!');
+    hasScored = true;
     score++;
     updateScore(score);
     resetGame();
@@ -244,7 +243,7 @@ canvas.addEventListener('touchend', function (e) {
 function startContinuousCheck() {
     if (!touchInterval) {
         touchInterval = setInterval(() => {
-            if (isTouching) {
+            if (isTouching && !throwing) {
                 windup();
             }
         }, 20);
