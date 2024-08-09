@@ -35,10 +35,6 @@ body {
     padding: 10px;
 }
 
-canvas {
-    filter: blur(4px);
-    
-}
 
 #ui { 
     position: absolute;
