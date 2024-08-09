@@ -33,7 +33,7 @@ let ballYVelocity = -50;
 let gravity = .5;
 
 const hoopX = 244;
-const hoopY = 320;
+const hoopY = 350;
 
 // Game States 
 let started = false;
