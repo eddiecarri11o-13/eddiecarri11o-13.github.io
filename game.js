@@ -256,7 +256,7 @@ function stopContinuousCheck() {
     touchInterval = null;
 
 
-    if (started) {
+    if (started && windingUp) {
         release();
     }
 }
