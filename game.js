@@ -91,7 +91,7 @@ function drawSun() {
 function drawPowerBar() {
     ctx.lineWidth = 3;
     ctx.strokeStyle = "black";
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = '#764EE9';
 
     ctx.beginPath();
     ctx.rect((canvas.width / 2) - 50, canvas.height - 100, power, 15)
