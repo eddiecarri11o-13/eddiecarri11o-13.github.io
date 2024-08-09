@@ -22,6 +22,8 @@ canvas.width = document.getElementById("wrapper").getBoundingClientRect().width;
 canvas.height = document.getElementById("wrapper").getBoundingClientRect().height;
 
 // Game Variables
+let defaultPlayerName = "precisepingu";
+let currentPlayerName = defaultPlayerName;
 let score = 0;
 let power = 0;
 let ballX = 92;
@@ -75,9 +77,9 @@ function drawBball() {
 }
 
 function drawPlayer(state) {
-    const cloud = new Image()
-    cloud.src = "/assets/precisepingu_" + state + ".png"
-    ctx.drawImage(cloud, 80, 480, 65, 153);
+    const player = new Image()
+    player.src = "/assets/" + currentPlayerName + "_" + state + ".png"
+    ctx.drawImage(player, 80, 480, 65, 153);
 }
 
 function drawSun() {
@@ -87,16 +89,16 @@ function drawSun() {
 }
 
 function drawPowerBar() {
-    ctx.lineWidth = 4;
+    ctx.lineWidth = 3;
     ctx.strokeStyle = "black";
     ctx.fillStyle = 'red';
 
     ctx.beginPath();
-    ctx.rect((canvas.width / 2) - 50, canvas.height - 100, power, 50)
+    ctx.rect((canvas.width / 2) - 50, canvas.height - 100, power, 15)
     ctx.fill();
 
     ctx.beginPath();
-    ctx.rect((canvas.width / 2) - 50, canvas.height - 100, 100, 50)
+    ctx.rect((canvas.width / 2) - 50, canvas.height - 100, 100, 15)
     ctx.stroke();
 
 }
@@ -260,6 +262,13 @@ function stopContinuousCheck() {
     }
 }
 
+const playerSelectButtons = document.querySelectorAll('.player');
+
+playerSelectButtons.forEach(button => {
+    button.addEventListener('click', function(event) {
+        currentPlayerName = event.target.id;
+    });
+});
 
 
 
